@@ -1,0 +1,34 @@
+# ????
+server:
+  port: 8080
+# ????
+spring:
+  application:
+    name: myDemo-server
+  datasource:
+    url: jdbc:mysql://localhost:3306/campus_community
+    username: root
+    password: MySQL57
+    driver-class-name: com.mysql.jdbc.Driver
+
+# ????
+logging:
+  # ????
+  level:
+    root: info
+    org.mybatis.generator: debug
+    org.mybatis: debug
+  file:
+    # ???????
+    name: /logs/${spring.application.name}.log
+  pattern:
+    # ??????[????] [???] [????] [??.???] [????]
+    file: myDemo %d{yyyy-MM-dd HH:mm:ss.SSS} %p %C.%M %m %n
+
+# MyBatis??
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+  check-config-location: true
+
