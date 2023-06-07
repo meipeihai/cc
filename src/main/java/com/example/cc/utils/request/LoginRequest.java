@@ -1,11 +1,10 @@
-package com.example.cc.utils;
+package com.example.cc.utils.request;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
-
-public class SignupRequest {
-
+//登录内容
+public class LoginRequest {
     @Email(message = "无效的电子邮件地址")
     @NotBlank(message = "电子邮件不能为空")
     private String email;
@@ -14,9 +13,8 @@ public class SignupRequest {
     @NotBlank(message = "密码不能为空")
     private String password;
 
-    @Size(min = 1,message = "至少一个字符")
-    @NotBlank(message = "用户名不能为空")
-    private String username;
+
+    private String phoneNumber;
     // 接下来可以添加其他字段
 
     public String getEmail() {
@@ -35,12 +33,11 @@ public class SignupRequest {
         this.password = password;
     }
 
-    public String getUsername() {
-        return username;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
-// 接下来可以添加其他getter和setter方法
 }

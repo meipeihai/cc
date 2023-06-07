@@ -1,4 +1,4 @@
-package com.example.cc.utils;
+package com.example.cc.utils.response;
 
 public class MessageResponse {
     private String message;
