@@ -45,8 +45,8 @@
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
         <!-- 指定数据库表  多个表,可用多个table标签-->
-        <table tableName="student"/>
-        <table tableName="admin"/>
+
+        <table tableName="session"/>
 
     </context>
 </generatorConfiguration>
